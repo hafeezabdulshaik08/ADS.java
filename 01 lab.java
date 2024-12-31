@@ -177,3 +177,28 @@ public class binarysearch
 }
 
 
+import java.util.Scanner;
+class linearsearch{
+  public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the no of Elemts:");
+  int n = sc.nextInt();
+  int[] a=new int[n];
+  System.out.println("enter "+n+" number:");
+  for(int i=0;i<n;i++)
+    a[i]=sc.nextInt();
+  System.out.println("enter element to search:");
+  int key=sc.nextInt();
+  int x=linearsearch(a,key);
+  if(x!=-1)
+    System.out.println("element found the location:"+x);
+  else
+    System.out.println("element not found");
+  }
+  public static int linearsearch(int[] a,int key){
+    for(int i=0;i<a.length;i++)
+      if(a[i]==key)
+        return i;
+    return -2;
+  }
+}
