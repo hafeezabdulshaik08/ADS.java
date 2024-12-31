@@ -80,5 +80,43 @@ public class selectionsort{
 }
 
 
+import java.util.Scanner;
+public class Insertionsort {
+	public static void sort(int a[]){
+        	int n = a.length;
+        	for (int i = 1; i < n; ++i) {
+            	int key = a[i];
+            	int j = i - 1;
+            	
+            		while (j >= 0 && a[j] > key) {
+               		a[j + 1] = a[j];
+                	j = j - 1;
+            		}
+            	a[j + 1] = key;
+       		}
+       	}		
+	public static void main(String[] args){
+        	int n,i,j;
+        	Scanner sc = new Scanner(System.in);
+        	System.out.println("enter the number of elements of the array");
+        	n = sc.nextInt();
+        	int a[] = new int[n];
+
+        	System.out.println("enter the elements");
+       		for(i = 0;i<n;i++){
+            	j = sc.nextInt();
+            	a[i] = j;
+        	}
+        	sort(a);
+        	for(i = 0; i<n;i++){
+            		System.out.print("  "+a[i] );
+        	}
+    	}
+
+
+}
+
+
+
 
 
